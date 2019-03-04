@@ -1,0 +1,17 @@
+{
+  "name": "jquerytest",
+  "homepage": "https://github.com/hylee862/web",
+  "authors": [
+    "Hyunho Lee <dlgh2941@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
