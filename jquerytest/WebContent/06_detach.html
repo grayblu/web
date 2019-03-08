@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<style>
+	.list1, .list2 {
+		width: 30%;
+	 }
+</style>
+<script>
+$(function() {
+	$('.item').click(function(){
+		var item = $(this);
+		item.alert('item select!');
+		var parent = item.parent();
+		//item.detach();
+		
+		if(parent.hasClass('list1')){
+			item.appendTo('.list2').css('background','yellow');
+		}else{
+			item.appendTo('.list1').css('background','gray');
+		}
+	})
+})
+</script>
+</head>
+<body>
+	<div class="list1 float-left mr-5" style="width:30%">
+		<h4>item list</h4>	
+		<div class="item">item1</div>
+		<div class="item">item2</div>
+		<div class="item">item3</div>
+		<div class="item">item4</div>
+		<div class="item">item5</div>
+		<div class="item">item6</div>
+	</div>
+	<div class="list2 float-left" style="width:30%">
+		<h1>item list2</h1>
+	</div>	
+</body>
+</html>
